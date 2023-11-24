@@ -32,7 +32,7 @@ def generate_launch_description():
         {'product_name': 'LDLiDAR_LD14'},
         {'laser_scan_topic_name': 'scan'},
         {'point_cloud_2d_topic_name': 'pointcloud2d'},
-        {'frame_id': 'base_laser'},
+        {'frame_id': 'laser_link'},
         {'port_name': '/dev/ttyUSB0'},
         {'serial_baudrate' : 115200},
         {'laser_scan_dir': True},
@@ -44,12 +44,12 @@ def generate_launch_description():
       ]
   )
 
-  # base_link to base_laser tf node
+  # base_link to laser_link tf node
   base_link_to_laser_tf_node = Node(
     package='tf2_ros',
     executable='static_transform_publisher',
     name='base_link_to_base_laser_ld14',
-    arguments=['0','0','0.18','0','0','0','base_link','base_laser']
+    arguments=['0','0','0.18','0','0','0','base_link','laser_link']
   )
 
 

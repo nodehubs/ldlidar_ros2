@@ -6,7 +6,7 @@ LDLIDAR ROS2驱动，以ROS2标准消息格式发送激光雷达数据。
 
 完善的产品型号请以[ldlidar官网](https://www.ldrobot.com/) LDLIDAR X3为例进行演示。
 
-![LDLIDAR](images/lslidar.jpg  "v")
+![LDLIDAR](images/ldlidar.jpg  "v")
 
 | 物料选项    | 清单      | 
 | ------- | ------------ | 
