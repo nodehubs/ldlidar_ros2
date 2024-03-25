@@ -1,23 +1,23 @@
-# 使用CMake生成visual studio C++ 工程
-> 前提条件，PC上需要提前安装有visual studio IDE 和 CMake Tool。
+# Use CMake to generate visual studio C++ projects
+> Prerequisites The visual studio IDE and CMake Tool must be installed on the PC.
 
-## 方法一：命令行方式
-- 在`sample/windows`目录下打开powershell终端，以创建`Visual Studio 15 2017 Win64`环境下的C++工程为例，运行如下命令。
-```powershell
-mkdir build   # create `build` folder.
+## Method 1: Command line mode
+- Open the powershell terminal in the 'sample/windows' directory and run the following command to create a C++ project in the' Visual Studio 15 2017 Win64 'environment as an example.
+``` powershell
+mkdir build
 
 cd build
 
-cmake -G "Visual Studio 15 2017 Win64" ../
+cmake -G "Visual Studio 15 2017 Win64" .. /
 ```
 
-## 方法二： CMake  GUI
+## Method 2： CMake  GUI
 
-- 在`sample/windows` 目录下创建`build` 文件夹
+- Create a `build` folder in the `sample/windows` director
 
 	- ![](./pic/1.png)
 
-- 运行CMake GUI,完成相关配置，生成VC++工程并编译运行
+- Run CMake GUI, complete related configuration, generate VC++ project, compile and run
 	- <img src="./pic/2.png" style="zoom:80%;" />
 
 	- <img src="./pic/3.png" style="zoom:80%;" />
