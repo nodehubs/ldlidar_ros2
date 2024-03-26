@@ -1,3 +1,5 @@
+[English](./README.md) | 简体中文
+
 # 功能介绍
 
 LDLIDAR ROS2驱动，以ROS2标准消息格式发送激光雷达数据。
