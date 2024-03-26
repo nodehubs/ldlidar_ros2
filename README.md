@@ -1,3 +1,5 @@
+English| [简体中文](./README_cn.md)
+
 # Function Introduction
 
 LDLIDAR ROS2 driver sends laser radar data in ROS2 standard message format.
@@ -28,7 +30,7 @@ Connect to RDK X3 via terminal or VNC, and execute the following commands:
 ```bash
 sudo apt update
 sudo apt install -y tros-ldlidar_ros2
-
+```
 **Note: If LDLIDAR is connected to RDK X3 during installation, it needs to be plugged in again after installation.**
 
 ## Running LDLIDAR
