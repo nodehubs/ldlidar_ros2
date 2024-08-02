@@ -27,16 +27,29 @@ For detailed product models, please refer to [LDLIDAR official website](https://
 
 Connect to RDK X3 via terminal or VNC, and execute the following commands:
 
+tros foxy: 
 ```bash
 sudo apt update
 sudo apt install -y tros-ldlidar_ros2
 ```
+tros humble:
+```bash
+sudo apt update
+sudo apt install -y tros-humble-ldlidar_ros2
+```
+
 **Note: If LDLIDAR is connected to RDK X3 during installation, it needs to be plugged in again after installation.**
 
 ## Running LDLIDAR
 
+tros foxy:
 ```bash
 source /opt/tros/setup.bash
+ros2 launch ldlidar_ros2 ld06.launch.py
+```
+tros humble:
+```bash
+source /opt/tros/humble/setup.bash
 ros2 launch ldlidar_ros2 ld06.launch.py
 ```
 
@@ -47,11 +60,17 @@ ros2 launch ldlidar_ros2 ld06.launch.py
 
 Open a new terminal and enter the following command to view laser radar output data:
 
-
+tros foxy:
 ```bash
 source /opt/tros/setup.bash
 ros2 topic echo /scan
 ```
+tros humble:
+```bash
+source /opt/tros/humble/setup.bash
+ros2 topic echo /scan
+```
+
 ### Method 2: Using Foxglove Visualization
 
 
@@ -60,16 +79,30 @@ ros2 topic echo /scan
 1. Go to the Foxglove [official website](https://foxglove.dev/download) to download Foxglove Studio and install it on your PC.
 2. Open a new terminal on RDK and enter the following command to install rosbridge:
 
-```bash
-sudo apt install ros-foxy-rosbridge-suite
-```
+    tros foxy: 
+    ```bash
+    sudo apt update
+    sudo apt install ros-foxy-rosbridge-suite
+    ```
+    tros humble:
+    ```bash
+    sudo apt update
+    sudo apt install ros-humble-rosbridge-suite
+    ```
 
 3. Run the following command to start rosbridge:
 
-```bash
-source /opt/tros/setup.bash
-ros2 launch rosbridge_server rosbridge_websocket_launch.xml
-```
+    tros foxy:
+    ```bash
+    source /opt/tros/setup.bash
+    ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+    ```
+    tros humble:
+    ```bash
+    source /opt/tros/humble/setup.bash
+    ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+    ```
+
 4. Open Foxglove Studio, select "Open Connection," choose rosbridge as the connection method in the subsequent dialog, and enter the RDK's IP address instead of localhost.
 
 ![foxglove](images/foxglove_1.jpg  "CONFIG")
@@ -81,8 +114,15 @@ ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 ### Method 3: RVIZ
 
 Install ROS2 on a PC or an environment that supports RVIZ. Here, we take the foxy version as an example, run:
+
+tros foxy:
 ```bash
 source /opt/ros/foxy/setup.bash
+ros2 run rviz2 rviz2
+```
+tros humble:
+```bash
+source /opt/ros/humble/setup.bash
 ros2 run rviz2 rviz2
 ```
 
